@@ -1,11 +1,11 @@
-#include <string>
+п»ї#include <string>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 
 using namespace std;
 
-//провряем, есть ли пробел
+//РїСЂРѕРІСЂСЏРµРј, РµСЃС‚СЊ Р»Рё РїСЂРѕР±РµР»
 bool check(const string& inp) {
 	for (int i = 0; i < inp.size(); ++i) {
 		if (inp[i] != ' ') {
@@ -17,16 +17,16 @@ bool check(const string& inp) {
 int main() {
 	setlocale(LC_ALL, "");
 	ifstream in("in.txt");
-	string line;//предложение
-	stringstream ss;//строковый поток
-	while (getline(in, line)) {//считываем по предложению
-							   //если строка начинается с тире
+	string line;//РїСЂРµРґР»РѕР¶РµРЅРёРµ
+	stringstream ss;//СЃС‚СЂРѕРєРѕРІС‹Р№ РїРѕС‚РѕРє
+	while (getline(in, line)) {//СЃС‡РёС‚С‹РІР°РµРј РїРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЋ
+							   //РµСЃР»Рё СЃС‚СЂРѕРєР° РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ С‚РёСЂРµ
 		if (check(line)) {
 			ss << line << '\n';
 		}
 	}
 	cout << ss.str();
-	in.close();//закрываем файл			
+	in.close();//Р·Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»			
 
 	system("pause>>void");
 
